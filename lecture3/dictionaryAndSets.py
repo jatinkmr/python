@@ -67,3 +67,26 @@ print('Difference between x and y -> ', x.intersection(y)) # Find the common ele
 x.intersection_update(y)
 print('x after intersection_update -> ', x)
 
+collection = set()
+collection.add(1)
+collection.add(2)
+collection.add(1) # Our set ignores that value 1 as it's containing only unique values
+print('collection -> ', collection)
+
+collection.remove(1)
+print("collection -> ", collection)
+
+collection.add("test") # We can pass string to our set
+collection.add((4, 5, 6)) # we can also pass Tuple to out set
+print("collection -> ", collection)
+# collection.add([9, 8, 7]) # We cannot pass the list to our set as it's unhashable type.
+print("collection -> ", collection, 'len -> ', len(collection))
+collection.clear() # for clearing the collection
+print('collection -> ', collection);
+
+setCollection1 = {1, 2, 3}
+setCollection2 = {3, 4, 5}
+print('setCollection1 union with setCollection2 -> ', setCollection1.union(setCollection2))
+print('setCollection1 intersection with setCollection2 -> ', setCollection1.intersection(setCollection2))
+
+
